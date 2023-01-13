@@ -32,4 +32,17 @@ router.delete('/product/:id', async (req, res) => {
   res.status(httpResponse.status).json(httpResponse);
 })
 
+//Método de atualizar produtos pelo id
+router.put('/product/:id', async (req, res) => {
+  try {
+    const id = req.params.id;
+    const { name, price, validAt, batch, active } = req.body;
+    const httpResponse = await ctrl.updateProduct((id), {name, price, validAt, batch, active } );
+    res.status(httpResponse.status).json(httpResponse);
+    console.log(id);
+  } catch (err) {
+    res.status(httpResponse.status).json(httpResponse);
+  }
+});
+
 export default router;

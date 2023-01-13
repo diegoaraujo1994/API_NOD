@@ -9,7 +9,7 @@ export class Product extends Model {
           allowNull: false,
           validate: {
             notNull: {
-              msg: 'The active state of product cannot be null',
+              msg: 'O estado ativo do produto não pode ser nulo',
             },
           },
         },
@@ -20,7 +20,7 @@ export class Product extends Model {
           allowNull: false, // Diz que a chave não permite null.
           validate: {
             notNull: {
-              msg: 'The id of product cannot be null',
+              msg: 'O id do produto não pode ser nulo',
             },
           }, // Valida se a chave é null,
           // retorna a menasagem em caso de erro.
@@ -31,10 +31,10 @@ export class Product extends Model {
           validate: {
             len: {
               args: [3, 255],
-              msg: 'The field name cannot be empty',
+              msg: 'O nome do campo não pode estar vazio',
             },
             notNull: {
-              msg: 'The name of product cannot be null',
+              msg: 'O nome do produto não pode ser nulo',
             },
           },
         },
@@ -43,7 +43,7 @@ export class Product extends Model {
           allowNull: false,
           validate: {
             notNull: {
-              msg: 'The valid date of product cannot be null',
+              msg: 'a data de validade do produto não pode ser nula',
             },
           },
         },
@@ -52,7 +52,7 @@ export class Product extends Model {
           allowNull: false,
           validate: {
             notNull: {
-              msg: 'The batch of product cannot be null',
+              msg: 'O lote do produto não pode ser nulo',
             },
           },
         },
@@ -61,7 +61,7 @@ export class Product extends Model {
           allowNull: false,
           validate: {
             notNull: {
-              msg: 'The price of product cannot be null',
+              msg: 'O preço do produto não pode ser nulo',
             },
           },
         },
@@ -71,9 +71,4 @@ export class Product extends Model {
   }
 }
 
-//   id;
-//   name;
-//   validAt;
-//   batch;
-//   price;
-//   active;
+

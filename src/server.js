@@ -6,7 +6,7 @@ import './database'
 require('dotenv').config();
 
 // desestruturação de objetos
-const { PORT } = process.env; // {PORT};
+const { PORT } = process.env;
 
 const app = express();
 
